@@ -1,4 +1,4 @@
-# encoding=utf8
+# coding:utf8
 from __future__ import unicode_literals
 import MySQLdb
 from django_expa import expaApi
@@ -39,7 +39,6 @@ def load_world_performance():
 	    for program in programs:
 	        print "cargando %s" % program
 		performance = api.getCountryCurrentMCYearStats(program, office[0])
-                print performance
 		for officeID, values in performance.iteritems():
                     try:
                         c2.execute("INSERT INTO STATS VALUES (%s, %s, %s, %s, %s, %s, %s)", (officeID, program, values['applications'], values['accepted'], values['approved'], values['realized'], values['completed']))
