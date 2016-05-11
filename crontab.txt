@@ -1,3 +1,4 @@
 30 12,17,21 * * 1,2,3,4,5 /var/www/bdapp/bdEnv/bin/python /var/www/bdapp/manage.py refresh_world_stats >> /tmp/cronlog.txt 2>&1
+30 5 * * 1,2,3,4,5 /var/www/bdapp/bdEnv/bin/python /var/www/bdapp/manage.py mc_daily >> /tmp/cronlog_expa_podio.txt 2>&1
 #00 12 * * * /var/www/bdapp/bdEnv/bin/python /var/www/bdapp/manage.py load_hatchbuck >> /tmp/cronlog_hatchbuck.txt 2>&1
 30 12,17,21 * * 1,2,3,4,5 touch /tmp/ehtaSirviendo

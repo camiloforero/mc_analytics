@@ -32,7 +32,7 @@ def load_world_performance():
     c2 = get_db_cursor(db2)
     for office in c:
         if office[2] == 'Region':
-	    print 'Cargando los datos de la región %s' % office[1]
+	    print 'Cargando los datos de la region %s' % office[1]
 	elif office[2] == 'MC':
 	    print 'Cargando los datos del MC %s (id=%s)' % (office[1], office[0])
 	    allProgramsPerformance = {}
